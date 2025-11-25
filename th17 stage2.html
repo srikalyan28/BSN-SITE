@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>STAGE 2 BSN</title>
+<style>
+  body {
+    background: #121212;
+    color: #eee;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+  }
+  h1 {
+    color: #ffcc00;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .bracket-wrapper {
+    max-width: 700px;
+    margin: auto;
+    padding-bottom: 60px;
+  }
+
+  .group {
+    background: #222;
+    border: 2px solid #ffcc00;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 50px;
+  }
+  .group h2 {
+    color: #ffcc00;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  /* rounds container holds the rounds side by side */
+  .rounds-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    position: relative; /* IMPORTANT for SVG absolute */
+  }
+
+  .round {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    min-width: 120px;
+  }
+  .round h3 {
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: #ffd24d;
+  }
+
+  .match {
+    background: #333;
+    border: 2px solid #ffcc00;
+    border-radius: 6px;
+    padding: 8px 10px;
+    user-select: none;
+    font-size: 13px;
+    line-height: 1.2;
+    position: relative;
+    z-index: 10;
+  }
+
+  .match:hover {
+    background: #ffcc00;
+    color: #121212;
+  }
+
+  .player {
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 2px 0;
+  }
+
+  /* SVG inside rounds container */
+  svg.connector-svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: visible;
+    z-index: 5;
+  }
+
+  /* --- MOBILE LAYOUT --- */
+  @media (max-width: 720px) {
+    .rounds-container {
+      flex-direction: column;
+      gap: 30px;
+      height: auto !important; /* allow height growth */
+    }
+    .round {
+      min-width: 100%;
+      display: block;
+    }
+    svg.connector-svg {
+      width: 100% !important;
+      height: 100% !important;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 5;
+      pointer-events: none;
+    }
+    /* make matches bigger on mobile for readability */
+    .match {
+      font-size: 15px;
+      padding: 12px 15px;
+      border-width: 3px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<h1>32 Player Stage 2 Bracket</h1>
+
+<div class="bracket-wrapper">
+
+  <!-- Group A -->
+  <div class="group" id="group-a">
+    <h2>Group A</h2>
+    <div class="rounds-container" id="rounds-a">
+      <div class="round" data-round="16-a">
+        <h3>Round of 16</h3>
+        <div class="match" id="a-m1"><div class="player">SILENT TIGER(🚫)</div><div class="player ">☆★☆AJAY☆★☆(🚫)</div></div>
+        <div class="match" id="a-m2"><div class="player winner">MR._PRIT_007</div><div class="player">Suresh VJ</div></div>
+        <div class="match" id="a-m3"><div class="player winner">Abdul Hadi</div><div class="player">H$J</div></div>
+        <div class="match" id="a-m4"><div class="player winner">QL™ AJAY 333</div><div class="player">Vikaash</div></div>
+        <div class="match" id="a-m5"><div class="player winner">D∆RK SH∆dow</div><div class="player">Gravity</div></div>
+        <div class="match" id="a-m6"><div class="player">VAYNARD</div><div class="player winner">Anakin007</div></div>
+        <div class="match" id="a-m7"><div class="player winner">(TGF)Mehmet</div><div class="player">Danger warrior</div></div>
+        <div class="match" id="a-m8"><div class="player winner">QL™ AKSHAY</div><div class="player">lawflx</div></div>
+      </div>
+
+      <div class="round" data-round="8-a">
+        <h3>Quarterfinals</h3>
+        <div class="match" id="a-q1"><div class="player">NONE</div><div class="player">MR._PRIT_007</div></div>
+        <div class="match" id="a-q2"><div class="player">Abdul Hadi</div><div class="player">QL™ AJAY 333</div></div>
+        <div class="match" id="a-q3"><div class="player">D∆RK SH∆dow</div><div class="player">Anakin007</div></div>
+        <div class="match" id="a-q4"><div class="player">(TGF)Mehmet</div><div class="player">QL™ AKSHAY</div></div>
+      </div>
+
+      <div class="round" data-round="4-a">
+        <h3>Semifinals</h3>
+        <div class="match" id="a-s1"><div class="player">MR._PRIT_007</div><div class="player">QL™ AJAY 333</div></div>
+        <div class="match" id="a-s2"><div class="player">Anakin007</div><div class="player">QL™ AKSHAY</div></div>
+      </div>
+
+      <div class="round" data-round="2-a">
+        <h3>Final (Group A)</h3>
+        <div class="match" id="a-f1"><div class="player">QL™ AJAY 333</div><div class="player">QL™ AKSHAY</div></div>
+      </div>
+
+      <svg class="connector-svg" id="svg-a"></svg>
+    </div>
+  </div>
+
+  <!-- Group B -->
+  <div class="group" id="group-b">
+    <h2>Group B</h2>
+    <div class="rounds-container" id="rounds-b">
+      <div class="round" data-round="16-b">
+        <h3>Round of 16</h3>
+        <div class="match" id="b-m1"><div class="player">ICL KARTHIK</div><div class="player winner">Himanta</div></div>
+        <div class="match" id="b-m2"><div class="player winner">Vivy</div><div class="player">Rafi</div></div>
+        <div class="match" id="b-m3"><div class="player">WP Cowboy</div><div class="player winner">Sgbilal</div></div>
+        <div class="match" id="b-m4"><div class="player winner">DW✨AKHIL✨</div><div class="player">DARK-NOVA</div></div>
+        <div class="match" id="b-m5"><div class="player">Shiva shiva</div><div class="player winner">....KP....</div></div>
+        <div class="match" id="b-m6"><div class="player">SpookyNaim</div><div class="player winner">蛇×ᴏʙᴀɴᴀɪ</div></div>
+        <div class="match" id="b-m7"><div class="player">Mr coc lover (🚫)</div><div class="player">Mr Brightside(🚫)</div></div>
+        <div class="match" id="b-m8"><div class="player winner">Tormax</div><div class="player">㉺ζ‌‌⸙ᴘᴜʀ‌‌ᴘʟᴇ个〆</div></div>
+      </div>
+
+      <div class="round" data-round="8-b">
+        <h3>Quarterfinals</h3>
+        <div class="match" id="b-q1"><div class="player">Himanta</div><div class="player">Vivy</div></div>
+        <div class="match" id="b-q2"><div class="player">Sgbilal</div><div class="player">DW✨AKHIL✨</div></div>
+        <div class="match" id="b-q3"><div class="player">....KP....</div><div class="player">蛇×ᴏʙᴀɴᴀɪ</div></div>
+        <div class="match" id="b-q4"><div class="player">NONE</div><div class="player">Tormax</div></div>
+      </div>
+
+      <div class="round" data-round="4-b">
+        <h3>Semifinals</h3>
+        <div class="match" id="b-s1"><div class="player">Himanta</div><div class="player">Sgbilal</div></div>
+        <div class="match" id="b-s2"><div class="player">蛇×ᴏʙᴀɴᴀɪ</div><div class="player">Tormax</div></div>
+      </div>
+
+      <div class="round" data-round="2-b">
+        <h3>Final (Group B)</h3>
+        <div class="match" id="b-f1"><div class="player">Sgbilal</div><div class="player">Tormax</div></div>
+      </div>
+
+      <svg class="connector-svg" id="svg-b"></svg>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  // Create curved SVG path between two rects relative to container (desktop)
+  function createCurvedPath(start, end) {
+    const xmlns = "http://www.w3.org/2000/svg";
+    const path = document.createElementNS(xmlns, "path");
+
+    const startX = start.right;
+    const startY = start.top + start.height / 2;
+
+    const endX = end.left;
+    const endY = end.top + end.height / 2;
+
+    const curveOffsetX = 30;
+
+    const d = `
+      M${startX},${startY}
+      C${startX + curveOffsetX},${startY}
+       ${endX - curveOffsetX},${endY}
+       ${endX},${endY}
+    `;
+
+    path.setAttribute("d", d);
+    path.setAttribute("stroke", "#ffcc00");
+    path.setAttribute("stroke-width", 3);
+    path.setAttribute("fill", "none");
+
+    return path;
+  }
+
+  // Create straight L-shaped SVG path (mobile)
+  function createStraightPath(start, end) {
+    const xmlns = "http://www.w3.org/2000/svg";
+    const path = document.createElementNS(xmlns, "path");
+
+    const startX = start.right;
+    const startY = start.top + start.height / 2;
+
+    const endX = end.left;
+    const endY = end.top + end.height / 2;
+
+    const midX = (startX + endX) / 2;
+
+    const d = `
+      M${startX},${startY}
+      L${midX},${startY}
+      L${midX},${endY}
+      L${endX},${endY}
+    `;
+
+    path.setAttribute("d", d);
+    path.setAttribute("stroke", "#ffcc00");
+    path.setAttribute("stroke-width", 3);
+    path.setAttribute("fill", "none");
+
+    return path;
+  }
+
+  function getRect(elem, container) {
+    const elemRect = elem.getBoundingClientRect();
+    const containerRect = container.getBoundingClientRect();
+
+    return {
+      left: elemRect.left - containerRect.left,
+      right: elemRect.right - containerRect.left,
+      top: elemRect.top - containerRect.top,
+      bottom: elemRect.bottom - containerRect.top,
+      width: elemRect.width,
+      height: elemRect.height,
+    };
+  }
+
+  // Draw connections inside each group
+  function drawGroupConnections(groupId) {
+    const group = document.getElementById(groupId);
+    const roundsContainer = group.querySelector(".rounds-container");
+    const svg = roundsContainer.querySelector("svg.connector-svg");
+    svg.innerHTML = "";
+
+    const isMobile = window.innerWidth <= 720;
+    const pathCreator = isMobile ? createStraightPath : createCurvedPath;
+
+    // Round of 16 (8 matches) → Quarterfinals (4 matches)
+    for (let i = 1; i <= 8; i++) {
+      const startMatch = document.getElementById(`${groupId.charAt(groupId.length - 1)}-m${i}`);
+      const nextIndex = Math.ceil(i / 2);
+      const endMatch = document.getElementById(`${groupId.charAt(groupId.length - 1)}-q${nextIndex}`);
+      if (startMatch && endMatch) {
+        const start = getRect(startMatch, roundsContainer);
+        const end = getRect(endMatch, roundsContainer);
+        svg.appendChild(pathCreator(start, end));
+      }
+    }
+
+    // Quarterfinals (4 matches) → Semifinals (2 matches)
+    for (let i = 1; i <= 4; i++) {
+      const startMatch = document.getElementById(`${groupId.charAt(groupId.length - 1)}-q${i}`);
+      const nextIndex = Math.ceil(i / 2);
+      const endMatch = document.getElementById(`${groupId.charAt(groupId.length - 1)}-s${nextIndex}`);
+      if (startMatch && endMatch) {
+        const start = getRect(startMatch, roundsContainer);
+        const end = getRect(endMatch, roundsContainer);
+        svg.appendChild(pathCreator(start, end));
+      }
+    }
+
+    // Semifinals (2 matches) → Final (1 match)
+    for (let i = 1; i <= 2; i++) {
+      const startMatch = document.getElementById(`${groupId.charAt(groupId.length - 1)}-s${i}`);
+      const endMatch = document.getElementById(`${groupId.charAt(groupId.length - 1)}-f1`);
+      if (startMatch && endMatch) {
+        const start = getRect(startMatch, roundsContainer);
+        const end = getRect(endMatch, roundsContainer);
+        svg.appendChild(pathCreator(start, end));
+      }
+    }
+  }
+
+  function redrawAll() {
+    // Adjust SVG height dynamically to container height for mobile vertical stacking
+    ["group-a", "group-b"].forEach(groupId => {
+      const group = document.getElementById(groupId);
+      const roundsContainer = group.querySelector(".rounds-container");
+      const svg = roundsContainer.querySelector("svg.connector-svg");
+
+      // Set svg height and width to rounds container size
+      const rcRect = roundsContainer.getBoundingClientRect();
+      svg.style.width = rcRect.width + "px";
+      svg.style.height = rcRect.height + "px";
+    });
+
+    drawGroupConnections("group-a");
+    drawGroupConnections("group-b");
+  }
+
+  window.addEventListener("load", redrawAll);
+  window.addEventListener("resize", redrawAll);
+</script>
+
+</body>
+</html>

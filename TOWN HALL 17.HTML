@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TH17 Bracket - BSN Cup S2</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: #f7f9fc;
+      font-family: 'Roboto', sans-serif;
+      color: #333;
+    }
+
+    h1 {
+      text-align: center;
+      color: #222;
+      font-size: 2.5rem;
+      padding: 30px 10px 10px;
+      font-weight: 700;
+    }
+
+    .bracket {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 24px;
+      padding: 30px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .match {
+      background: #ffffff;
+      border-radius: 12px;
+      border: 1px solid #e0e0e0;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+      padding: 20px;
+      width: 300px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: all 0.2s ease-in-out;
+    }
+
+    .match:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+    }
+
+    .player {
+      width: 100%;
+      text-align: center;
+      padding: 12px;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      background-color: #f5f5f5;
+      transition: background-color 0.2s ease-in-out;
+    }
+
+    .player small {
+      display: block;
+      margin-top: 4px;
+      font-size: 0.85rem;
+      color: #777;
+    }
+
+    .vs {
+      font-weight: bold;
+      margin: 8px 0;
+      font-size: 1.1rem;
+      color: #444;
+    }
+
+    .winner {
+      background-color: #e6f7e9 !important;
+      border: 1px solid #b6e5c3;
+      color: #1b5e20;
+      font-weight: 700;
+    }
+
+   .waiting-list-box {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px 25px;
+  background: #fff8e1;
+  border: 2px solid #d4af37;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(212, 175, 55, 0.2);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.waiting-list-box h3 {
+  text-align: center;
+  color: #d4af37;
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.waiting-list-box ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: #333;
+  font-size: 1rem;
+}
+
+.waiting-list-box ul li {
+  padding: 10px 0;
+  border-bottom: 1px solid #e6d8a3;
+}
+
+.waiting-list-box ul li:last-child {
+  border-bottom: none;
+}
+
+.gold-button {
+  display: inline-block;
+  background-color: #d4af37;
+  color: white;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.gold-button:hover {
+  background-color: #b8860b;
+}
+
+
+
+  </style>
+</head>
+<body>
+
+  <h1>BSN CUP S2 : STAGE 1  — TH17 SOLO BRACKET</h1>
+   <a href="th17 stage2.html" class="gold-button">STAGE 2</a>
+   <a href="th17 stage3.html" class="gold-button">STAGE 3</a>
+   
+<div style="padding: 20px; text-align: center;">
+  <input
+    id="searchInput"
+    type="text"
+    placeholder="Enter your name or username"
+    style="padding: 10px; width: 70%; max-width: 300px; font-size: 16px; border: 2px solid #d4af37; border-radius: 5px;"
+  />
+  <button
+    onclick="searchPlayer()"
+    style="padding: 10px 20px; margin-left: 10px; font-size: 16px; background-color: #d4af37; border: none; color: white; border-radius: 5px; cursor: pointer;"
+  >
+    Search
+  </button>
+</div>
+
+
+  <div class="bracket">
+
+    
+
+    <!-- Match 1 karthik force wins -->
+    <div class="match">
+      <div class="player winner ">ICL KARTHIK<br><small>@mr_blaze</small></div>
+      <div class="vs">vs</div>
+      <div class="player">BLOODLINE<br><small>@zangetsu.zero_o9</small></div>
+    </div>
+
+    <!-- Match 2 -->
+    <div class="match">
+      <div class="player">RED DRAGON<br><small>@dragon54i</small></div>
+      <div class="vs">vs</div>
+      <div class="player winner">SILENT TIGER<br><small>@Onyx_012</small></div>
+    </div>
+
+    <!-- Match 3 -->
+    <div class="match">
+      <div class="player  winner">☆★☆AJAY☆★☆<br><small>@ajays.py</small></div>
+      <div class="vs">vs</div>
+      <div class="player">ajiii<br><small>@ajiiii_</small></div>
+    </div>
+
+    <!-- Match 4 -->
+    <div class="match">
+      <div class="player">Ig Veeru 1 <br><small>@ig_veeru</small></div>
+      <div class="vs">vs</div>
+      <div class="player  winner">MR._PRIT_007 <br><small>@prit9383</small></div>
+    </div>
+
+    <!-- Match 5 -->
+    <div class="match">
+      <div class="player">Hilal <br><small>@Noir.aii</small></div>
+      <div class="vs">vs</div>
+      <div class="player  winner">Suresh VJ <br><small>@Suresh_vj</small></div>
+    </div>
+
+    <!-- Match 6 -->
+    <div class="match">
+      <div class="player">CRAZY <br><small>@mdkhair0379</small></div>
+      <div class="vs">vs</div>
+      <div class="player  winner">Abdul Hadi <br><small>@abdhulhadi1165</small></div>
+    </div>
+
+    <!-- Match 7 -->
+    <div class="match">
+      <div class="player">Clash of RD <br><small>@dhruvrupala</small></div>
+      <div class="vs">vs</div>
+      <div class="player  winner">H$J <br><small>@hjinya960</small></div>
+    </div>
+
+    <!-- Match 8 -->
+    <div class="match">
+      <div class="player  winner">QL™ AJAY 333 <br><small>@ajay__333</small></div>
+      <div class="vs">vs</div>
+      <div class="player">Diptangshu™ <br><small>@blizzard_op</small></div>
+    </div>
+
+    <!-- Match 9 -->
+    <div class="match">
+      <div class="player">神 Kai™ <br><small>@strange1.7xsen</small></div>
+      <div class="vs">vs</div>
+      <div class="player  winner">Vikaash <br><small>@vikaash6818</small></div>
+    </div>
+
+    <!-- Match 10 -->
+    <div class="match">
+      <div class="player  winner">D∆RK SH∆dow<br><small>@giyuu05329</small></div>
+      <div class="vs">vs</div>
+      <div class="player">Raj <br><small>@raj94</small></div>
+    </div>
+
+    <!-- Match 11 -->
+    <div class="match">
+      <div class="player  winner">Gravity <br><small>@anoic</small></div>
+      <div class="vs">vs</div>
+      <div class="player">enderkiller859 <br><small>@softhacks</small></div>
+    </div>
+
+    <!-- Match 12 -->
+    <div class="match">
+      <div class="player">Vickymax <br><small>@vickymax4414</small></div>
+      <div class="vs">vs</div>
+      <div class="player  winner">VAYNARD <br><small>@vaynard0</small></div>
+    </div>
+
+    <!-- Match 13 -->
+    <div class="match">
+      <div class="player  winner">Anakin007<br><small>@anakin007</small></div>
+      <div class="vs">vs</div>
+      <div class="player">⚡️Houcy⚡️ <br><small>@_frozentitan</small></div>
+    </div>
+
+    <!-- Match 14 -->
+    <div class="match">
+      <div class="player  winner">(TGF)Mehmet <br><small>@mehmet080184</small></div>
+      <div class="vs">vs</div>
+      <div class="player">Antozzo <br><small>@antozzo</small></div>
+    </div>
+
+    <!-- Match 15 -->
+    <div class="match">
+      <div class="player">BLOODLINE <br><small>@piyushsharma2661</small></div>
+      <div class="vs">vs</div>
+      <div class="player  winner">Danger warrior <br><small>@dangerwarrior_dw</small></div>
+    </div>
+
+    <!-- Match 16 -->
+    <div class="match">
+      <div class="player winner">QL™ AKSHAY <br><small>@akshayking</small></div>
+      <div class="vs">vs</div>
+      <div class="player">Arrow <br><small>@mohitrana1</small></div>
+    </div>
+
+    <!-- Match 17 -->
+    <div class="match">
+      <div class="player winner">lawflx <br><small>@mejtschi</small></div>
+      <div class="vs">vs</div>
+      <div class="player">ゾロ - 海賊狩り <br><small>@raf006339</small></div>
+    </div>
+
+    <!-- Match 18 -->
+    <div class="match">
+      <div class="player  winner">Vivy <br><small>@enza8684</small></div>
+      <div class="vs">vs</div>
+      <div class="player">AlMaiti <br><small>@abhirupmaiti</small></div>
+    </div>
+
+    <!-- Match 19 -->
+    <div class="match">
+      <div class="player  winner">Rafi <br><small>@rafi9544</small></div>
+      <div class="vs">vs</div>
+      <div class="player">Bahubali <br><small>@king04728</small></div>
+    </div>
+
+    <!-- Match 20 -->
+    <div class="match">
+      <div class="player  winner">WP Cowboy <br><small>@ia_cowboy</small></div>
+      <div class="vs">vs</div>
+      <div class="player">KR$NA <br><small>@navinn_17</small></div>
+    </div>
+
+    <!-- Match 21 -->
+    <div class="match">
+      <div class="player">KHANNA SACHIN <br><small>@sachinkhanna0537</small></div>
+      <div class="vs">vs</div>
+      <div class="player winner">Sgbilal <br><small>@bilalsayeed</small></div>
+    </div>
+
+    <!-- Match 22 -->
+    <div class="match">
+      <div class="player">Benfica <br><small>@_benfica004</small></div>
+      <div class="vs">vs</div>
+      <div class="player winner">DW✨AKHIL✨ <br><small>@akhil5559</small></div>
+    </div>
+
+    <!-- Match 23 -->
+    <div class="match">
+      <div class="player  winner">DARK-NOVA <br><small>@darknova07</small></div>
+      <div class="vs">vs</div>
+      <div class="player">HW ⚔️ OP SIYAM ✅ <br><small>@siyamhasan0130</small></div>
+    </div>
+
+    <!-- Match 24 -->
+    <div class="match">
+      <div class="player">Kishor Pasha <br><small>@nahiyan4748</small></div>
+      <div class="vs">vs</div>
+      <div class="player  winner">Shiva shiva <br><small>@shivashiva6240</small></div>
+    </div>
+
+    <!-- Match 25 -->
+    <div class="match">
+      <div class="player">youpindao <br><small>@.pikachugaming</small></div>
+      <div class="vs">vs</div>
+      <div class="player  winner">....KP.... <br><small>@.kp._63</small></div>
+    </div>
+
+    <!-- Match 26 -->
+    <div class="match">
+      <div class="player">Ali Haider Chy <br><small>@alihaiderchowdhury</small></div>
+      <div class="vs">vs</div>
+      <div class="player  winner">SpookyNaim <br><small>@spookynaim</small></div>
+    </div>
+
+    <!-- Match 27 -->
+    <div class="match">
+      <div class="player">Unstoppable <br><small>@blade010823</small></div>
+      <div class="vs">vs</div>
+      <div class="player  winner">蛇×ᴏʙᴀɴᴀɪ <br><small>@mxxticxane</small></div>
+    </div>
+
+    <!-- Match 28 -->
+    <div class="match">
+      <div class="player winner">Mr coc lover <br><small>@silentboy0741</small></div>
+      <div class="vs">vs</div>
+      <div class="player">Ansh ynwa LFC <br><small>@anshynwa</small></div>
+    </div>
+
+    <!-- Match 29 -->
+    <div class="match">
+      <div class="player  winner">Mr Brightside <br><small>@matrix9504</small></div>
+      <div class="vs">vs</div>
+      <div class="player">Cedlen <br><small>@Badagrouw</small></div>
+    </div>
+
+    <!-- Match 30 -->
+    <div class="match">
+      <div class="player">Coldblood <br><small>@scoopy_97</small></div>
+      <div class="vs">vs</div>
+      <div class="player  winner">Tormax <br><small>@_tormax</small></div>
+    </div>
+
+    <!-- Match 31 -->
+    <div class="match">
+      <div class="player  winner">㉺ζ‌‌⸙ᴘᴜʀ‌‌ᴘʟᴇ个〆 <br><small>@sir.parpol</small></div>
+      <div class="vs">vs</div>
+      <div class="player">BP TORPE <br><small>@TOPPE.18</small></div>
+    </div>
+
+    <!-- Match 32 -->
+    <div class="match">
+      <div class="player">Kirito <br><small>@vitaminc2913</small></div>
+      <div class="vs">vs</div>
+      <div class="player  winner">Himanta <br><small>@himanta001</small></div>
+    </div>
+
+    
+
+   <div class="waiting-list-box"> 
+  <h3>⏳ Waiting List</h3>
+  <ul>
+    <li>1. MASTER SHOWKAT (@shakti706)</li>
+  <li>2. ⚡️EXTREMO⚡️ (@extremo6667)</li>
+  <li>3. Unknown s (@siyamhasan0130)</li>
+    
+   
+    <!-- Add more names as needed -->
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+   
+  </div>
+<script>
+  function searchPlayer() {
+    const input = document.getElementById("searchInput").value.trim().toLowerCase();
+    if (!input) return;
+
+    const matches = document.querySelectorAll(".match");
+    let found = false;
+
+    matches.forEach(match => {
+      const players = match.querySelectorAll(".player");
+      players.forEach(playerDiv => {
+        // Get full text content (includes name and @username)
+        const playerText = playerDiv.textContent.replace(/\s+/g, " ").trim().toLowerCase();
+        if (playerText.includes(input)) {
+          match.scrollIntoView({ behavior: "smooth", block: "center" });
+          match.style.transition = "background-color 0.3s ease";
+          match.style.backgroundColor = "#fff1a8";
+          setTimeout(() => {
+            match.style.backgroundColor = "";
+          }, 3000);
+          found = true;
+        }
+      });
+    });
+
+    if (!found) {
+      alert("No match found with that name or username.");
+    }
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>STAGE 3 BSN</title>
+  <style>
+    body {
+      background: #121212;
+      color: #eee;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      align-items: center;
+      padding-bottom: 40px;
+    }
+    h1 {
+      text-align: center;
+      color: #ffcc00;
+      margin-bottom: 30px;
+      font-weight: 900;
+      text-shadow: 0 0 10px #ffcc00cc;
+      width: 100%;
+    }
+    .bracket-box {
+      background: #1c1c1c;
+      border: 2px solid #ffcc00;
+      border-radius: 14px;
+      padding: 20px 30px;
+      width: 340px;
+      box-shadow: 0 0 15px #ffcc00aa inset;
+      position: relative;
+    }
+    .bracket-box h2 {
+      margin: 0 0 15px 0;
+      color: #ffd24d;
+      font-weight: 700;
+      text-align: center;
+      text-shadow: 0 0 8px #ffd24d99;
+      letter-spacing: 0.05em;
+    }
+    .match {
+      background: #222;
+      border: 3px solid #ffcc00;
+      border-radius: 12px;
+      padding: 14px 12px;
+      font-weight: 700;
+      margin: 12px 0;
+      box-shadow:
+        0 0 8px #ffcc00cc,
+        inset 0 0 7px #ffcc00dd;
+      position: relative;
+      cursor: default;
+      user-select: none;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      font-size: 14px;
+      color: #ffd24d;
+    }
+    .match:hover {
+      background: #ffcc00;
+      color: #121212;
+      box-shadow:
+        0 0 14px #ffd700ee,
+        inset 0 0 10px #ffd700ff;
+    }
+    .player {
+      background: #333;
+      padding: 6px 14px;
+      border-radius: 8px;
+      width: 110px;
+      text-align: center;
+      user-select: text;
+      color: #fff;
+      font-weight: 600;
+      box-shadow: inset 0 0 6px #000a;
+      transition: all 0.3s ease;
+    }
+    .player.winner {
+      background: #ffd700;
+      color: #121212;
+      font-weight: 800;
+      box-shadow:
+        0 0 12px #ffd700cc,
+        inset 0 0 14px #ffd700dd;
+    }
+    .vs {
+      color: #ffcc00;
+      font-weight: 900;
+      user-select: none;
+      font-size: 16px;
+    }
+    /* Arrow icons to show progression inside brackets */
+    .arrow-down {
+      width: 24px;
+      height: 24px;
+      margin: 5px auto 15px;
+      fill: #ffcc00;
+      display: block;
+    }
+
+    /* MOBILE RESPONSIVE STYLES */
+    @media (max-width: 600px) {
+      body {
+        margin: 10px;
+        padding-bottom: 20px;
+      }
+      .bracket-box {
+        width: 90vw;
+        padding: 12px 16px;
+        box-shadow: 0 0 10px #ffcc0099 inset;
+        border-width: 2px;
+        border-radius: 10px;
+      }
+      .bracket-box h2 {
+        font-size: 1.1rem;
+        margin-bottom: 10px;
+        letter-spacing: 0.04em;
+      }
+      .match {
+        padding: 8px 8px;
+        font-size: 12px;
+        margin: 8px 0;
+        border-width: 2px;
+        box-shadow:
+          0 0 6px #ffcc0099,
+          inset 0 0 6px #ffcc00bb;
+      }
+      .player {
+        width: 90px;
+        padding: 4px 8px;
+        font-size: 12px;
+      }
+      .player.winner {
+        font-weight: 700;
+        box-shadow:
+          0 0 8px #ffd700bb,
+          inset 0 0 10px #ffd700cc;
+      }
+      .vs {
+        font-size: 14px;
+      }
+      .arrow-down {
+        width: 20px;
+        height: 20px;
+        margin: 4px auto 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<h1>Double Elimination Final Brackets  </h1>
+
+<!-- 1. First Set -->
+<div class="bracket-box" id="first-set">
+  <h2>First Set</h2>
+  <div class="match" id="fs-m1">
+    <div class="player winner">Aryan Raj</div>
+    <div class="vs">vs</div>
+    <div class="player">SHDW ICZZY!!!</div>
+  </div>
+  <svg class="arrow-down" viewBox="0 0 24 24"><path d="M12 16l-6-6h12z"/></svg>
+  <div class="match" id="fs-m2">
+    <div class="player">VB VATSAL</div>
+    <div class="vs">vs</div>
+    <div class="player winner">king of coc</div>
+  </div>
+</div>
+
+<!-- 2. Winners Bracket (Qualifier 1 Set) -->
+<div class="bracket-box" id="winners-bracket">
+  <h2>Qualifier 1 Set (Winners Bracket)</h2>
+  <div class="match" id="wq1-m1">
+    <div class="player">Aryan Raj</div>
+    <div class="vs">vs</div>
+    <div class="player winner ">king of coc</div>
+  </div>
+</div>
+
+<!-- 3. Losers Bracket (Elimination 1 Set) -->
+<div class="bracket-box" id="losers-bracket">
+  <h2>Elimination 1 Set (Losers Bracket)</h2>
+  <div class="match" id="le1-m1">
+    <div class="player">SHDW ICZZY!!!</div>
+    <div class="vs">vs</div>
+    <div class="player winner">VB VATSAL</div>
+  </div>
+</div>
+
+<!-- 4. Qualifier 2 Set -->
+<div class="bracket-box" id="qualifier-2-set">
+  <h2>Qualifier 2 Set</h2>
+  <div class="match" id="q2-m1">
+    <div class="player winner">Aryan Raj</div>
+    <div class="vs">vs</div>
+    <div class="player ">VB VATSAL</div>
+  </div>
+</div>
+
+<!-- 5. Grand Final -->
+<div class="bracket-box" id="grand-final">
+  <h2>Grand Final</h2>
+  <div class="match" id="gf-m1">
+    <div class="player ">king of coc</div>
+    <div class="vs">vs</div>
+    <div class="player winner">Aryan Raj</div>
+  </div>
+</div>
+
+</body>
+</html>
