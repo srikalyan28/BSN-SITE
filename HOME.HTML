@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
-<meta name="verify-admitad" content="074b14a84c" />
-
-
+  <meta name="verify-admitad" content="074b14a84c" />
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -72,106 +71,200 @@
       color: #000;
     }
 
-    footer {
+    /* BSN CLANS bot info section */
+    .bot-info {
+      padding: 40px 20px;
+      max-width: 800px;
+      margin: 0 auto;
       text-align: center;
-      padding: 20px;
-      background-color: #1a1a1a;
-      color: #999;
       border-top: 1px solid #333;
+      border-bottom: 1px solid #333;
+    }
+
+    .bot-info h2 {
+      color: #ffcc00;
+      margin-bottom: 15px;
+      font-size: 1.8rem;
+    }
+
+    .bot-info p {
+      color: #ccc;
+      margin-bottom: 20px;
+      font-size: 1rem;
+    }
+
+    .bot-links {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .bot-links a {
+      background-color: #1f1f1f;
+      color: #ffcc00;
+      text-decoration: none;
+      padding: 10px 18px;
+      border-radius: 8px;
+      border: 1px solid #ffcc00;
+      font-size: 0.95rem;
+      transition: 0.3s;
+    }
+
+    .bot-links a:hover {
+      background-color: #ffcc00;
+      color: #000;
+    }
+
+    /* Footer */
+
+    .footer-main {
+      background-color: #111;
+      padding: 40px 20px 20px 20px;
+      text-align: center;
+      border-top: 2px solid #ffcc00;
+      margin-top: 60px;
+    }
+
+    .footer-main h3 {
+      color: #ffcc00;
+      font-size: 1.6rem;
+      margin-bottom: 20px;
+      letter-spacing: 1px;
+    }
+
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+
+    .social-links a {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      transition: transform 0.3s ease;
+    }
+
+    .social-links a:hover {
+      transform: scale(1.2);
+    }
+
+    .social-links img {
+      width: 100%;
+      height: 100%;
+      filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(200deg) brightness(150%) contrast(100%);
+    }
+
+    .legal-links {
+      margin-top: 10px;
+      margin-bottom: 10px;
+      font-size: 0.9rem;
+    }
+
+    .legal-links a {
+      color: #ffcc00;
+      text-decoration: none;
+      margin: 0 8px;
+    }
+
+    .legal-links a:hover {
+      text-decoration: underline;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      padding: 10px 20px 20px 20px;
+      background-color: #111;
+      color: #999;
+      font-size: 0.9rem;
+    }
+
+    /* Responsive tweaks */
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
+
+      .nav-links a {
+        width: 100%;
+        text-align: center;
+      }
+
+      .bot-info h2 {
+        font-size: 1.5rem;
+      }
     }
   </style>
 </head>
+
 <body>
   <header>
     <h1>BLACKSPIRE NATION</h1>
   </header>
 
   <section class="hero">
-    <p>Welcome to the official site of BLACKSPIRE NATION. Here, elite players clash in the BSN CUP. Track progress, view results, and honor champions.</p>
+    <p>Blackspire Nation is home to elite Clash of Clans competitors where tournaments, clan progression, and strategic dominance define the battlefield.</p>
   </section>
 
   <section class="nav-links">
-
-<!--<a href="STAFF PANEL.HTML"> 👔 BSN STAFF PANEL </a> -->
-
+    <!--<a href="STAFF PANEL.HTML"> 👔 BSN STAFF PANEL </a>-->
     <!-- <a href="TOURNAMENT.HTML"> 🎯 BSN SOLO CUP SEASON 2 </a> -->
-    
-    <a href="BSN CUP winners.html">🏆 BSN CUP Winner Hall</a> 
-    <a href="Koth winners.html">🏆 KOTH Winner Hall</a> 
+    <a href="BSN CUP winners.html">🏆 BSN CUP Winner Hall</a>
+    <a href="Koth winners.html">🏆 KOTH Winner Hall</a>
     <a href="BUC CUP winners.html">🏆 BUC CUP Winner Hall</a>
-
-
   </section>
 
-  
-  <!-- 👇 Place this just before </body> on any page -->
-<footer class="footer">
-  <div class="footer-container">
-    <h3>CONNECTIONS</h3>
-    <div class="social-links">
-      <a href="https://www.youtube.com/@blackspirenation" target="_blank" title="YouTube">
-        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/youtube.svg" alt="YouTube">
-      </a>
-      <a href="https://x.com/TeamBlackSpire" target="_blank" title="Twitter">
-        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/x.svg" alt="Twitter">
-      </a>
-      <a href="https://www.instagram.com/blackspirenation" target="_blank" title="Instagram">
-        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram">
-      </a>
-      <a href="https://discord.gg/38aGmcVcca" target="_blank" title="Discord">
-        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/discord.svg" alt="Discord">
-      </a>
-      <a href="https://balck-spire-nation.webflow.io/" target="_blank" title="Official Site">
-        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/internetarchive.svg" alt="Website">
-      </a>
+  <!-- BSN CLANS Bot section with legal links -->
+  <section class="bot-info">
+    <h2>BSN CLANS Discord Bot</h2>
+    <p>BSN CLANS is the official clan management bot used inside the Blackspire Nation Discord server for Clash of Clans
+      clan tracking and management.</p>
+    <div class="bot-links">
+      <a href="bsn-clans-privacy.html">BSN CLANS Privacy Policy</a>
+      <a href="bsn-clans-terms.html">BSN CLANS Terms of Service</a>
     </div>
-  </div>
-</footer>
+  </section>
 
-<style>
-  .footer {
-    background-color: #111;
-    padding: 40px 20px;
-    text-align: center;
-    border-top: 2px solid #ffcc00;
-    margin-top: 60px;
-  }
+  <!-- Footer -->
+  <footer class="footer-main">
+    <div class="footer-container">
+      <h3>CONNECTIONS</h3>
+      <div class="social-links">
+        <a href="https://www.youtube.com/@blackspirenation" target="_blank" title="YouTube">
+          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/youtube.svg" alt="YouTube">
+        </a>
+        <a href="https://x.com/TeamBlackSpire" target="_blank" title="Twitter">
+          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/x.svg" alt="Twitter">
+        </a>
+        <a href="https://www.instagram.com/blackspirenation" target="_blank" title="Instagram">
+          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram">
+        </a>
+        <a href="https://discord.gg/38aGmcVcca" target="_blank" title="Discord">
+          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/discord.svg" alt="Discord">
+        </a>
+        <a href="https://balck-spire-nation.webflow.io/" target="_blank" title="Official Site">
+          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/internetarchive.svg" alt="Website">
+        </a>
+      </div>
 
-  .footer-container h3 {
-    color: #ffcc00;
-    font-size: 1.6rem;
-    margin-bottom: 20px;
-    letter-spacing: 1px;
-  }
-
-  .social-links {
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-    flex-wrap: wrap;
-  }
-
-  .social-links a {
-    display: inline-block;
-    width: 40px;
-    height: 40px;
-    transition: transform 0.3s ease;
-  }
-
-  .social-links a:hover {
-    transform: scale(1.2);
-  }
-
-  .social-links img {
-    width: 100%;
-    height: 100%;
-    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(200deg) brightness(150%) contrast(100%);
-  }
-
-  
-</style>
-<footer>
-    <p>© 2025 BLACKSPIRE NATION | Clash Of Clans</p>
+      <div class="legal-links">
+        <a href="bsn-clans-privacy.html">BSN CLANS Privacy Policy</a> |
+        <a href="bsn-clans-terms.html">BSN CLANS Terms of Service</a>
+      </div>
+    </div>
   </footer>
+
+  <div class="footer-bottom">
+    <p>© 2025 BLACKSPIRE NATION | Clash Of Clans</p>
+  </div>
+
 </body>
+
 </html>
